@@ -41,6 +41,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        padding: 20px;
     }
 
     .nav-list{
@@ -51,9 +52,9 @@
 
     }
 
-    .nav-element{
+    // .nav-element{
 
-    }
+    // }
 
     li{
         list-style: none;
