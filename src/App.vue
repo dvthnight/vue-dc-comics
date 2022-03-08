@@ -1,22 +1,29 @@
+
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <DcHeader/>
+    <DcMain/>
+    <DcFooter/>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DcHeader from './components/DcHeader.vue'
+import DcMain from "./components/DcMain.vue"
+import DcFooter from "./components/DcFooter.vue"
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    DcHeader,
+    DcMain,
+    DcFooter,
   }
 }
 </script>
 
-<style lang="scss">
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
