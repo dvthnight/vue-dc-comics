@@ -1,13 +1,13 @@
 <template>
     <main>
 
-        <div class="immagine_jumbo">
-            
-        </div>
+        <div class="immagine_jumbo"> </div>
+        <h3 class="titolo_serie_corrente">Current series</h3>
         <div class="container">
            <div class="fumetti">
               <FumettoDc v-for="(el,i) in fumetti" :key="i" :thumb="el.thumb" :series="el.series" />
            </div>
+           <button class="load_button">Load More</button>
         </div>
     </main>
 </template>
@@ -109,32 +109,65 @@
     main{
         background-color: rgb(26, 26, 26);
         width: 100%;
+        position: relative;
+
 
         .immagine_jumbo{
             background-image: url("../assets/img/jumbotron.jpg");
             height: 400px;
+
+            
         }
-    }
 
-    .container{
-        width: 1280px;
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        padding: 20px;
-
-
-        // .text{
-        //     margin: 0 auto;
-        //     color: white;
-        //     font-size: 30px;
-        // }
-
-        .fumetti{
+        .titolo_serie_corrente{
+            color: white;
+            background-color: rgb(29, 121, 239);
+            width: 245px;
+            padding: 10px;
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: 700;
+            position: absolute;
+            left: 300px;
+            z-index: 9999;
+            top: 373px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .container{
+            width: 1280px;
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            margin: 0 auto;
+            padding: 40px 0;
+            position: relative;
 
+            // .text{
+            //     margin: 0 auto;
+            //     color: white;
+            //     font-size: 30px;
+            // }
+
+            .fumetti{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+
+            }
+
+            .load_button{
+                color: white;
+                background-color: rgb(29, 121, 239);
+                text-transform: uppercase;
+                border: none;
+                padding: 10px 50px;
+                font-weight: 700;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 10px;
+            }
         }
     }
+
 </style>
