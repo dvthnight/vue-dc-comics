@@ -42,52 +42,58 @@
                 <div class="footer_centrale">
                     <div class="container">
 
-                    <div class="colonna1">
-                         <div class="ul_1_sx">
-                            <h3>Dc Comics</h3>
-                            <li class="el_foot_centr"><a href="#">Characters</a></li>
-                            <li class="el_foot_centr"><a href="#">Comics</a></li>
-                            <li class="el_foot_centr"><a href="#">Movies</a></li>
-                            <li class="el_foot_centr"><a href="#">TV</a></li>
-                            <li class="el_foot_centr"><a href="#">Games</a></li>
-                            <li class="el_foot_centr"><a href="#">Videos</a></li>
-                            <li class="el_foot_centr"><a href="#">News</a></li>
+                        <div class="centrale_colonne">
+                            <div class="colonna1 col_foot">
+                                <div class="ul_1_sx col_foot">
+                                    <h3 class="titolo_colonne_footer">Dc Comics</h3>
+                                    <li class="el_foot_centr"><a href="#">Characters</a></li>
+                                    <li class="el_foot_centr"><a href="#">Comics</a></li>
+                                    <li class="el_foot_centr"><a href="#">Movies</a></li>
+                                    <li class="el_foot_centr"><a href="#">TV</a></li>
+                                    <li class="el_foot_centr"><a href="#">Games</a></li>
+                                    <li class="el_foot_centr"><a href="#">Videos</a></li>
+                                    <li class="el_foot_centr"><a href="#">News</a></li>
+                                </div>
+
+                                <div class="ul_2_sx col_foot">
+                                    <h3 class="titolo_colonne_footer">Shop</h3>
+                                    <li class="el_foot_centr"><a href="#">Shop DC</a></li>
+                                    <li class="el_foot_centr"><a href="#">Shop DC Collectibles</a></li>
+                                
+                                </div>
+                            </div>
+
+                            <div class="colonna2 col_foot">
+                                <h3 class="titolo_colonne_footer">DC</h3>
+                                <li class="el_foot_centr"><a href="#">Terms Of Use</a></li>
+                                <li class="el_foot_centr"><a href="#">Privacy policy (New)</a></li>
+                                <li class="el_foot_centr"><a href="#">Ad Choices</a></li>
+                                <li class="el_foot_centr"><a href="#">Advertising</a></li>
+                                <li class="el_foot_centr"><a href="#">Jobs</a></li>
+                                <li class="el_foot_centr"><a href="#">Subscriptions</a></li>
+                                <li class="el_foot_centr"><a href="#">Talent Workshop</a></li>
+                                <li class="el_foot_centr"><a href="#">CPSC Certicates</a></li>
+                                <li class="el_foot_centr"><a href="#">Ratings</a></li>
+                                <li class="el_foot_centr"><a href="#"></a>Shop Help</li>
+                                <li class="el_foot_centr"><a href="#">Contact Us</a></li>
+                            </div>
+
+                            <div class="colonna3 col_foot">
+                                <h3 class="titolo_colonne_footer">Sites</h3>
+                                <li class="el_foot_centr"><a href="#">DC</a></li>
+                                <li class="el_foot_centr"><a href="#">MAD Magazine</a></li>
+                                <li class="el_foot_centr"><a href="#">DC Kids</a></li>
+                                <li class="el_foot_centr"><a href="#">DC Universe</a></li>
+                                <li class="el_foot_centr"><a href="#">DC Power Vista</a></li>
+                            </div>
+
                         </div>
 
-                        <div class="ul_2_sx">
-                            <h3>Shop</h3>
-                            <li class="el_foot_centr"><a href="#">Shop DC</a></li>
-                            <li class="el_foot_centr"><a href="#">Shop DC Collectibles</a></li>
-                          
+                        <div class="centrale_logo">
+                            
                         </div>
                     </div>
-
-                    <div class="colonna2">
-                        <h3>DC</h3>
-                        <li class="el_foot_centr"><a href="#">Terms Of Use</a></li>
-                        <li class="el_foot_centr"><a href="#">Privacy policy (New)</a></li>
-                        <li class="el_foot_centr"><a href="#">Ad Choices</a></li>
-                        <li class="el_foot_centr"><a href="#">Advertising</a></li>
-                        <li class="el_foot_centr"><a href="#">Jobs</a></li>
-                        <li class="el_foot_centr"><a href="#">Subscriptions</a></li>
-                        <li class="el_foot_centr"><a href="#">Talent Workshop</a></li>
-                        <li class="el_foot_centr"><a href="#">CPSC Certicates</a></li>
-                        <li class="el_foot_centr"><a href="#">Ratings</a></li>
-                        <li class="el_foot_centr"><a href="#"></a>Shop Help</li>
-                        <li class="el_foot_centr"><a href="#">Contact Us</a></li>
-                    </div>
-
-                    <div class="colonna3">
-                        <h3>Sites</h3>
-                        <li class="el_foot_centr"><a href="#">DC</a></li>
-                        <li class="el_foot_centr"><a href="#">MAD Magazine</a></li>
-                        <li class="el_foot_centr"><a href="#">DC Kids</a></li>
-                        <li class="el_foot_centr"><a href="#">DC Universe</a></li>
-                        <li class="el_foot_centr"><a href="#">DC Power Vista</a></li>
-                    </div>
-
                 </div>
-            </div>
             <div class="footer_basso">
                 <div class="container">
 
@@ -166,6 +172,8 @@
                     // font-size: 15px;
                 }
                 
+
+               
             }
 
 
@@ -187,9 +195,37 @@
             display: flex;
             flex-wrap: wrap;
             height: 100%;
+            justify-content: space-between;
 
-            .el_foot_centr{
-                color: white;
+            
+
+            .centrale_logo{
+                background-image: url("../assets/img/dc-logo-bg.png");
+                height: 100%;
+                width: 500px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+            }
+
+            .centrale_colonne{
+                display: flex;
+                gap: 30px;
+                padding: 30px;
+
+                .titolo_colonne_footer{
+                    font-size: 25px;
+                    margin-bottom: 10px;
+                    color: white;
+                }
+
+                .el_foot_centr{
+                    color: rgb(138, 138, 138);
+                }
+
+                .col_foot{
+                    margin-bottom: 10px;
+                }
             }
 
         }
