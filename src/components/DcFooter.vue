@@ -96,7 +96,30 @@
                 </div>
             <div class="footer_basso">
                 <div class="container">
+                    <div class="button_sign_foot">
+                        <button class="btn_sign">Sign-up Now</button>
+                    </div>
+                    <div class="social">
+                        <span class="follow">Follow Us</span>
 
+                        <ul class="lista_social">
+                            <li class="social_logo"><a href="#">
+                                <img src="../assets/img/footer-facebook.png" alt="">
+                                </a></li>
+                            <li class="social_logo"><a href="#">
+                                <img src="../assets/img/footer-twitter.png" alt="">
+                                </a></li>
+                            <li class="social_logo"><a href="#">
+                                <img src="../assets/img/footer-youtube.png" alt="">
+                                </a></li>
+                            <li class="social_logo"><a href="#">
+                                <img src="../assets/img/footer-pinterest.png" alt="">
+                                </a></li>
+                            <li class="social_logo"><a href="#">
+                                <img src="../assets/img/footer-periscope.png" alt="">
+                                </a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -235,6 +258,49 @@
     .footer_basso{
         height: 110px;
         background-color: rgb(42, 42, 42);
+
+        .container{
+            width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+
+            .btn_sign{
+                background-color: transparent;
+                border: 2px solid rgb(29, 121, 239);
+                color: white;
+                padding: 10px;
+                font-size: 15px;
+                text-transform: uppercase;
+                font-weight: 700;
+                cursor: pointer;
+
+            }
+
+            .social{
+
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                .follow{
+                    color: rgb(29, 121, 239);
+                    text-transform: uppercase;
+                    font-size: 20px;
+                    font-weight: 700;
+                    
+                }
+
+                .lista_social{
+                    display: flex;
+                    gap: 20px;
+                }
+            }
+        }
     }
 
 </style>
