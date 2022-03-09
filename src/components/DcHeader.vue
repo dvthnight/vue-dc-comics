@@ -6,16 +6,8 @@
             </figure>
 
             <ul class="nav-list">
-                <li class="nav-element"><a href="#">Characters</a></li>
-                <li class="nav-element"><a href="#">Comics</a></li>
-                <li class="nav-element"><a href="#">Movies</a></li>
-                <li class="nav-element"><a href="#">Tv</a></li>
-                <li class="nav-element"><a href="#">Games</a></li>
-                <li class="nav-element"><a href="#">Collectibles</a></li>
-                <li class="nav-element"><a href="#">Videos</a></li>
-                <li class="nav-element"><a href="#">Fans</a></li>
-                <li class="nav-element"><a href="#">News</a></li>
-                <li class="nav-element"><a href="#">Shop</a></li>
+                <li class="nav-element" v-for="(el,i) in navList" :key="i" :class="{'active': true == el.active} "><a href="#">{{el.text}}  </a></li>
+                
             </ul>
         </div>
     </header>
@@ -26,7 +18,47 @@
 
         data() {
             return{
+                navList:[
+                    {
+                        text: "Characters",
+                    },
 
+                    {
+                        text: "Comics",
+                        active: true,
+                    },
+
+                    {
+                        text: "Movies",
+                    },
+
+                    {
+                        text: "Tv",
+                    },
+
+                    {
+                        text: "Games",
+                    },
+                    {
+                        text: "Collectibles",
+                    },
+
+                    {
+                        text: "Videos",
+                    },
+
+                    {
+                        text: "Fans",
+                    },
+
+                    {
+                        text: "News",
+                    },
+
+                    {
+                        text: "Shop",
+                    },
+                ]
             }
         }
     }
@@ -48,7 +80,25 @@
         display: flex;
         text-transform: uppercase;
         gap: 30px;
+        font-weight: 700;
 
+            .nav-element{
+                &.active{
+                    color: rgb(29, 121, 239);
+                    position: relative;
+                }
+
+                &.active::after{
+                    content: "";
+                    display: block;
+                    background-color: rgb(29, 121, 239);
+                    height: 5px;
+                    width: 65px;
+                    position: absolute;
+                    top: 81px;
+                }
+
+            }
 
     }
 
