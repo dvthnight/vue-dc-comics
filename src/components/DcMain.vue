@@ -1,5 +1,9 @@
 <template>
     <main>
+
+        <div class="immagine_jumbo">
+            
+        </div>
         <div class="container">
            <div class="fumetti">
               <FumettoDc v-for="(el,i) in fumetti" :key="i" :thumb="el.thumb" :series="el.series" />
@@ -106,6 +110,10 @@
         background-color: rgb(26, 26, 26);
         width: 100%;
 
+        .immagine_jumbo{
+            background-image: url("../assets/img/jumbotron.jpg");
+            height: 400px;
+        }
     }
 
     .container{
@@ -113,6 +121,7 @@
         display: flex;
         flex-wrap: wrap;
         margin: 0 auto;
+        padding: 20px;
 
 
         // .text{
