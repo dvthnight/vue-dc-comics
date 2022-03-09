@@ -1,15 +1,22 @@
 <template>
     <main>
         <div class="container">
-           <div class="">
-              
+           <div class="fumetti">
+              <FumettoDc v-for="(el,i) in fumetti" :key="i" :thumb="el.thumb" :series="el.series" />
            </div>
         </div>
     </main>
 </template>
 
 <script>
+
+    import FumettoDc from "./FumettoDc.vue"
+
     export default{
+
+        components:{
+            FumettoDc
+        },
 
         data() {
             return{
@@ -113,5 +120,12 @@
         //     color: white;
         //     font-size: 30px;
         // }
+
+        .fumetti{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+
+        }
     }
 </style>
